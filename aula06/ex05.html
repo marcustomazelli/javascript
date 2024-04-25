@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar DOM com JS</p>
+    <div id="msg">clique em mim</div>
+    <script>
+        var corpo = window.document.body //defindindo uma variável corpo e selecionando/procurando o body na árvore DOM
+        var p1 = window.document.getElementsByTagName('p')[0] //def variável e selecionando por marca o primeiro (0) parágrafo (p)
+        //var d = window.document.getElementById('msg') //def var e selecionando por id 
+        var d = window.document.querySelector('div#msg') //def var e selecionando por queryselector SELETOR
+        window.document.write('está escrito assim: ' + p1.innerText) // usando DOM para escrever a frase dentro do parágrafo e concatenando com outra frase
+        corpo.style.background = 'yellow'
+        d.style.background = 'white'
+        d.innerText= 'estou aguardando...'
+    </script>
+</body>
+</html>
