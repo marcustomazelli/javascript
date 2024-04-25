@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area{
+            font: normal 20pt arial;
+            background-color: darkolivegreen;
+            color: white;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()"> <!-- disparei eventos pelo HTML-->
+        Interaja
+    </div>
+
+    <script>
+        var a = window.document.getElementById ('area')
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar) //disparei eventos pelo js
+        a.addEventListener('mouseout', saiu)
+
+        function clicar(){
+            a.innerText = 'Hello, World!'
+            a.style.background = 'black'
+        }
+
+        function entrar(){
+            a.innerText = 'cristianoooo'
+            a.style.background = 'red'
+
+        }
+        function saiu(){
+            a.innerText = 'saiuuuuuuu'
+        }
+        
+    </script>
+</body>
+</html>
