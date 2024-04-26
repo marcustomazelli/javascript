@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA</title>
+</head>
+<body>
+    <h1>Banco de Dados da FIFA</h1>
+    Digite qual é o seu time: <input type="text" name="time" id="itime">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+ 
+
+    <script>
+
+        function verificar(){ 
+            var txtt = document.getElementById('itime')
+            var res = document.querySelector('div#res')
+            var time = String(txtt.value)
+
+            if (time == 'Palmeiras' || time == 'palmeiras' || time == 'verdão' || time == 'Verdão'){
+                res.innerHTML = 'Você não tem mundial, seu porco imundo! Volta pro chiqueiro!'
+            } else {
+                res.innerHTML = 'Parabéns, você tem mundial!'
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>
