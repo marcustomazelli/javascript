@@ -12,6 +12,9 @@ function contar(){
         var f = Number(fim.value)
         var p = Number(passo.value)
 
+        if (p<=0){
+            window.alert('Passo inválido!')
+        }
         if (i < f){
             for(let c = i; c<=f ; c += p){
                 res.innerHTML += `${c} \u{1F449}`
